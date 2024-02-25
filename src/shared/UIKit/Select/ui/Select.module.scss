@@ -1,0 +1,98 @@
+* {
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.select {
+  position: relative;
+  width: 100% !important;
+
+  &__block {
+    display: flex;
+
+    border: 1px solid #dedede;
+    padding: 0 10px;
+
+    &:hover,
+    &:not([disabled]):focus {
+      border: 1px solid #ddd;
+    }
+
+    &__input {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+
+      &__label {
+        font-size: 12px;
+        margin: 0;
+        padding-top: 8px;
+        flex-basis: 16px;
+        color: #999;
+      }
+
+      &__field {
+        outline: transparent;
+        border: 0;
+        padding: 0 1px;
+        font-size: 13px;
+        min-height: 24px;
+        flex: 1;
+
+        transform: translateY(-5px);
+      }
+    }
+
+    &__controls {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      cursor: pointer;
+      padding-top: 5px;
+      gap: 8px;
+
+      &__toggler {
+        color: #aaa;
+        transform: scale(0.9);
+      }
+
+      &__clear {
+        cursor: pointer;
+        transform: scale(1.2);
+        color: #aaa;
+      }
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 49px;
+    border: 1px solid #dedede;
+
+    z-index: 9999;
+    overflow: auto;
+    max-height: calc(25px * 5);
+    width: calc(100% - 2px);
+
+    &__option {
+      width: 100%;
+      height: 25px;
+      text-align: left;
+      cursor: pointer;
+      background-color: white;
+      outline: none;
+      border: 0;
+      padding: 0 15px;
+      font-size: 12px;
+      transition: 0.25s;
+
+      &_chosen {
+        background-color: #eee !important;
+      }
+
+      &:hover {
+        background-color: #fcfcfc;
+      }
+    }
+  }
+}

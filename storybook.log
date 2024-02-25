@@ -1,0 +1,8 @@
+npm WARN ERESOLVE overriding peer dependency
+npm ERR! code ENETUNREACH
+npm ERR! syscall connect
+npm ERR! errno ENETUNREACH
+npm ERR! request to https://registry.npmjs.org/chokidar/-/chokidar-3.6.0.tgz failed, reason: connect ENETUNREACH 104.16.31.34:443 - Local (0.0.0.0:0)
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/aleksei/.npm/_logs/2024-02-24T12_52_59_418Z-debug-0.log
